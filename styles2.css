@@ -1,0 +1,211 @@
+@font-face {font-family: 'Cormorant Infant'; font-display: swap; src: local('CormorantInfant'), url('./fonts/CormorantInfant-Regular.ttf');}
+@font-face {font-family: 'SFProText'; font-display: swap; src: local('SFProText'), url('./fonts/SFProText-Regular.ttf');}
+@font-face {font-family: 'Inter'; font-display: swap; src: local('Inter'), url('./fonts/Inter-Regular.ttf');}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline; 
+    background: url('./img/bgD.jpg')  no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+
+    height: 100%; 
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering:   -o-crisp-edges;         /* Opera */
+    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.mobile_hide {
+    display: block;
+}
+
+.desktop_hide {
+    min-height: 0;
+    max-height: 0;
+    max-width: 0;
+    display: none !important;
+    overflow: hidden;
+    font-size: 0;
+}
+
+.fullWidth {
+    display: table;
+    margin: auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+h1 {
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+}
+
+header {
+    padding: 12px 0;
+}
+
+main .text {
+    margin-top: 20vh;
+    max-width: 620px; 
+}
+
+main .screens {
+    margin-top: 10vh; 
+}
+
+.text .title {
+    /*font-family: 'Cormorant Infant', serif;*/
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 68px; 
+
+    background: linear-gradient(90.9deg, rgba(5, 129, 129, 0.2) 13.02%, rgba(75, 215, 89, 0) 97.75%), linear-gradient(90deg, #002E4D 0%, #010683 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+}
+
+.text .desc {
+    margin-top: 28px;
+    /*font-family: 'SFProText';*/
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2E3A51;
+    max-width: 540px;
+}
+
+.text .stores {
+    margin-top: 49px;
+}
+
+footer {  
+    bottom:0;
+    width:100%;
+    padding-top: 50px;
+    padding-bottom: 18px;  
+}
+
+footer span {
+    /*font-family: 'Inter';*/
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px; 
+
+    text-align: center; 
+
+    color: #6A717C;
+
+}
+
+footer .privacy {
+    margin-left: 32px;
+}
+
+.privacy a {
+    color: #6A717C;
+    text-decoration: underline;
+} 
+
+@media (max-width: 1200px) { 
+    main .text { 
+        max-width: 54%;
+        margin-top: 15vh;
+    }
+    main .screens { 
+        max-width: 46%; 
+    }
+} 
+
+@media (max-width: 960px) { 
+    main .text { 
+        max-width: 100%;
+        margin-top: 15vh;
+    }
+    main .screens { 
+        max-width: 100%; 
+        float: left;
+    }
+} 
+
+@media (max-width: 620px) { 
+    body {
+        background-image: url('./img/bgM.jpg'); 
+    }
+    .mobile_hide {
+        min-height: 0;
+        max-height: 0;
+        max-width: 0;
+        display: none !important;
+        overflow: hidden;
+        font-size: 0;
+    }
+    .desktop_hide {
+        display: block !important; 
+    }
+    main .text {
+        margin-top: 40px;
+    }
+    .text .title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .text .desc {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .text .stores {
+        margin-top: 32px;
+    }
+    main .screens {
+        margin-top: 66px;
+    }
+}
